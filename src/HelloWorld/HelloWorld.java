@@ -4,6 +4,7 @@ public class HelloWorld {
     public static void main(String[] args){
         System.out.println("hello, world");
         System.out.println("提交git");
+        System.out.println("最后一次提交git，事实证明，直接提交整个项目就可以了，.idea下面的所有文件");
     }
 }
 
