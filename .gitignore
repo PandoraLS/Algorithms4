@@ -21,7 +21,7 @@
 
 # 特定文件
 *.iml
-workspace.xml
+# workspace.xml
 
 # 文件夹
 out/
