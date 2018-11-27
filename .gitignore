@@ -19,6 +19,9 @@
 *.tar.gz
 *.rar
 
+# 特定文件
+*.iml
+
 # 文件夹
 out/
 algs4-data/
