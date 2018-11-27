@@ -22,6 +22,7 @@
 # 特定文件
 *.iml
 # workspace.xml
+Algorithms4.iml
 
 # 文件夹
 out/
