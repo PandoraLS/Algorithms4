@@ -21,8 +21,8 @@
 
 # 特定文件
 *.iml
+workspace.xml
 
 # 文件夹
 out/
 algs4-data/
-.idea/
