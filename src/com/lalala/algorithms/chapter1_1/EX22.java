@@ -25,7 +25,7 @@ public class EX22 {
      */
     public static int rank(int key, int[] a, int lo, int hi, int depth) {
         for (int i = 0; i < depth; i++) {
-            System.out.printf("  ");
+            System.out.printf("     ");
         }
         System.out.println("lo=" + lo + ", hi=" + hi);
         if (lo > hi) {
@@ -43,12 +43,12 @@ public class EX22 {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4, 6, 7, 8, 9, 12, 15, 18, 22, 26, 29, 35, 36, 37, 41, 42, 45, 48};
-        int key = 27;
+        int key = 9;
         int pos = rank(key, a);
         if (pos == -1) {
-            System.out.println("not found!");
+            System.out.println("not found");
         } else {
-            System.out.println("position=" + pos);
+            System.out.println("the position is " + pos);
         }
     }
 }
