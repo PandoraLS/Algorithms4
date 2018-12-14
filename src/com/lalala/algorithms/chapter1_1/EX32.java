@@ -17,23 +17,29 @@ public class EX32 {
         double r = 60.0;
         int seg = (int) (r - l) / N;//每段的间距是seg
         int[] num = new int[N];//用于记录落入每段的数量
+        int max = 0;//max在后面的归一化会有用
         //0-12，13-24，25-36，37-48，49-60;
-        for (int i = 0; i < N; i++) { //l+i*seg
-            int count = 0;
-            for (int j = 0; j < dataflow.length; j++) {
-                if (l + seg * i <= dataflow[j] && dataflow[j] < l + seg * i + seg) {
-                    count++;
+        for (int i = 0; i < dataflow.length; i++) {
+            double element = dataflow[i];
+            if (l <= element && element <= r) {
+                for (int j = 0; j < N; j++) {
+                    if (l + seg * j < element && element <= l + seg * j + seg) {//左开右闭的区间
+                        //左开右闭的区间
+                        num[j]++;
+                        if (max < num[j]) {
+                            max = num[j];
+                        }
+                    }
                 }
             }
-            num[i] = count;
-            System.out.print(num[i] + " ");
         }
         for (int i = 0; i < N; i++) {
-            double x = 1.0 * i / N;
-            double y = num[i] / 20.0;
-            double rw = 0.5 / N;
-            double rh = num[i] / 20.0;
-            StdDraw.filledRectangle(x, y, rw, rh);
+            System.out.print(num[i] + " ");
+            double x = (1.0 * i + 0.5) / N;//横坐标的取值范围是0.0~1.0，x为矩形的中点
+            double y = num[i] / (max * 2.0);//纵坐标的取值范围是在0.0~1.0之间，y为矩形的中点
+            double rw = 0.3 / N;// 矩形半宽, 这里共有100个矩形（横坐标范围是0.0~1.0），那么每个矩形的半宽就是0.5/100
+//            double rh = y;//矩形的半高,a[i]为实际高度
+            StdDraw.filledRectangle(x, y, rw, y);
         }
 
 //        int M = 100;
