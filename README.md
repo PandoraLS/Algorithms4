@@ -11,3 +11,6 @@
 ----
 
 ### 第1章 基础
+
+src中的com.lalala.algorithms是用来自己写代码和实验的
+src中的edu.princeton.cs.algs4是用来实现官方demo的

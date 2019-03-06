@@ -20,7 +20,7 @@
 *.rar
 
 # 特定文件
-# *.iml
+*.iml
 # workspace.xml
 # Algorithms4.iml
 
