@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class EX38 {
     public static void main(String[] args) {
-        In in = new In("algs4-data/largeW.txt");
+        In in = new In("data/largeW.txt");
         int[] whitelist = in.readAllInts();
 
         long startTime = System.currentTimeMillis();
