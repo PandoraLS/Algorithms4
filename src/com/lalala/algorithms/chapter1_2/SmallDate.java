@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @Auther: lisen
  * @Date: 2019/3/8 22:43
- * @Description:
+ * @Description: [算法]由日期格式函数产生的若干思考 y * 512 + m * 32 + d https://blog.csdn.net/cook2eat/article/details/45373527
  */
 public class SmallDate {
     private final int value;
